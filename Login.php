@@ -18,18 +18,18 @@ if ($_POST) {
         $_SESSION['user'] = $x['username'];
         $_SESSION['id'] = $x['id'];
         $_SESSION['rol'] = $x['rol'];
+
+    if ($_SESSION) {
+        echo "Registratie is gelukt, U wordt doorverwezen...";
+        header("refresh:2; url=index.php");
+        exit;
+    }
+    exit;
+        
     } else {
         echo "U heeft de verkeerde gegevens ingevoerd";
     }
 
-    if ($_SESSION) {
-        echo "welkom " . $_SESSION['user'] . " <a href='Logout.php'>uitloggen </a>
-    <a href='Change.php?id=" . $_SESSION['id'] . "'>Profiel Wijzigen </a>";
-
-        if ($_SESSION['rol'] == 1) {
-            echo "<a href='admin.php'>Admin Panel </a>";
-        }
-    }
 } else {
 ?>
     <html>

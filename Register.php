@@ -18,7 +18,7 @@ $x = $v->execute(array($unaam,$ww,$email));
 if($x)
 {
     echo "Registratie is gelukt, U wordt doorverwezen...";
-    header("refresh:5; url=index.php");
+    header("refresh:2; url=index.php");
 }
 }
 ?>

@@ -25,13 +25,14 @@ foreach ($x as $z) {
                     text-align: center;
                     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
                     <?php echo $z['naam'] ?>
-                    <?php echo $z['beschrijving'] ?>
+                    <?php echo $z['beschrijving'] ?>                   
                     <a onclick="return confirm('Are u sure you want to delete this product?')"
                     href="Delete.php?id=<?php echo $z['id']; ?>"> Delete </a>
                     
                     </h2>
                     
     </div>
+    <a onclick="return" href="UserData.php">Hallo</a>
 <?php
 }
 

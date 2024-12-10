@@ -19,7 +19,7 @@ if ($_POST) {
 
     if ($zz) {
         echo "Wijzigingen zijn doorgevoerd, je wordt doorverwezen!";
-        header("refresh:5;url:Index.php");
+        header("refresh:2;url:Index.php");
     } else {
         echo "Er is iets fout gegaan :(";
     }
