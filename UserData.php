@@ -1,5 +1,7 @@
 <?php
+// Door Marijn/Mert
 include("Config.php");
+include("Navbar.php");
 session_start();
 
        echo "welkom " . $_SESSION['user'] . " <a href='Logout.php'>uitloggen </a>

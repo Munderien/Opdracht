@@ -1,4 +1,5 @@
 <?php
+// Door Mert
 include("Config.php");
 $id = $_GET['id'];
 

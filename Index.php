@@ -1,5 +1,7 @@
 <?php
+// Door Marijn
 include("Config.php");
+include("Navbar.php");
 
 $v = $db->prepare("select * from product");
 $v->execute(array());
@@ -24,15 +26,15 @@ foreach ($x as $z) {
                     font-size: 18;
                     text-align: center;
                     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                    <?php echo $z['naam'] ?>
-                    <?php echo $z['beschrijving'] ?>                   
-                    <a onclick="return confirm('Are u sure you want to delete this product?')"
-                    href="Delete.php?id=<?php echo $z['id']; ?>"> Delete </a>
-                    
-                    </h2>
-                    
+            <?php echo $z['naam'] ?>
+            <?php echo $z['beschrijving'] ?>
+            <?php if (isset($z['id'])) ?>
+<!-- Misschien nog een add to cart sectie naast de single page-->
+                <a href="SingleProduct.php?id=<?php echo htmlspecialchars($z['id']); ?>">Product Details</a>
+
+
+        </h2>
     </div>
-    <a onclick="return" href="UserData.php">Hallo</a>
 <?php
 }
 

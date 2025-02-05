@@ -1,4 +1,5 @@
 <?php
+// Door Giovanni
 include("Config.php");
 session_start();
 if ($_POST) {
@@ -37,19 +38,31 @@ if ($_POST) {
     <head>
         <style>
             body {
-                background: linear-gradient(to bottom right, pink, purple);
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #fff;
             }
 
-            input {
+            input[type="submit"], a.register-button {
                 border-radius: 5px;
-                border-color: black;
+                border: 2px solid black;
                 margin: 5px;
-                padding: 5px;
-
-                background: linear-gradient(to bottom right, green, blue);
-
+                padding: 5px 10px;
+                background: #1a5bbd;
                 color: black;
                 font-size: 16px;
+                text-align: center;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover, a.register-button:hover {
+                background: #134a9e;
             }
         </style>
     </head>
@@ -57,16 +70,17 @@ if ($_POST) {
     <body>
         <form method="post" action="">
             <table>
-                    <tr>
-                        <td>Username: </td>
-                        <td><input type="text" name="naam"> </td>
-                    </tr>
-                    <tr>
-                        <td>Password: </td>
-                        <td><input type="password" name="wachtwoord"></td>
+                <tr>
+                    <td>Username: </td>
+                    <td><input type="text" name="naam"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="wachtwoord"></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="inloggen"></td>
+                    <td><a href="register.php" class="register-button">Register</a></td>
                 </tr>
             </table>
         </form>

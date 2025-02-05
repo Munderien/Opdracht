@@ -1,4 +1,5 @@
 <?php
+// Door Marijn/Mert
 try{
 $db = new PDO("mysql:host=localhost;dbname=3sv1;", "root", "");
 }

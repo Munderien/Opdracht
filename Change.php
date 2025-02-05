@@ -1,5 +1,7 @@
 <?php
 include("Config.php");
+include("Navbar.php");
+// Door Marijn
 session_start();
 
 $id = $_GET['id'];
